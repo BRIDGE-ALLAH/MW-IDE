@@ -240,7 +240,7 @@ color-preference = "dark"
         // test that it falls through to the dark theme for unspecified color
         assert_eq!(
             lapce_config.color("lapce.warn"),
-            Color::from_rgb8(0xE5, 0xC0, 0x7B),
+            Color::from_rgb8(0xE8, 0xB9, 0x5F),
             "Failed to get from fallback dark theme"
         ); // $yellow
         // test that our custom variable worked
