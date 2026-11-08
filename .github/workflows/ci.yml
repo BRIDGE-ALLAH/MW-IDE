@@ -50,12 +50,15 @@ jobs:
       - name: Build
         run: cargo build --profile ci --frozen
 
+      - name: Run workspace unit tests
+        run: cargo test --profile ci --workspace --lib
+
       - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: moonwitness-ide-${{ matrix.os }}
           path: |
             target/ci/lapce*
-          retention-days: 1
+          retention-days: 7
 
       - name: Build as portable
         if: startsWith(matrix.os, 'windows')

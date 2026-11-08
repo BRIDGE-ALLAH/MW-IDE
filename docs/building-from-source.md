@@ -84,6 +84,7 @@ The repository's GitHub Actions workflow currently runs formatting, Clippy, cros
 ```sh
 cargo fmt --all --check
 cargo clippy --profile ci
+cargo test --profile ci --workspace --lib
 cargo test --profile ci --doc --workspace
 cargo build --profile ci --frozen
 ```
